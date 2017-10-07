@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Elixir at Talkdesk</title>
+<meta name="author" content="(Tiago Sousa)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/css/theme/sky.css" id="theme"/>
+
+<link rel="stylesheet" href="file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="https://elixir-lang.org/images/logo/logo.png" data-background-size="200px" data-background-position="10% 5%"><h1 class="title">Elixir at Talkdesk</h1><h2 class="author">Tiago Sousa</h2><p class="date">Created: 2017-05-24 Wed 23:51</p>
+</section>
+
+<section>
+<section id="slide-org50ea329">
+<h2 id="org50ea329">Who am I?</h2>
+<p>
+Tiago Sousa.
+</p>
+
+<ul>
+<li>Platform TL</li>
+<li>Employee #4</li>
+<li>Polyglot programmer</li>
+<li>Elixir since 2014</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org58f9b73" data-background="https://4.bp.blogspot.com/-bNyR_uS82mY/VDPWGnIP62I/AAAAAAABQSU/SGpvafEDxuk/s0/Laptop%2Bcoffee%2Bcup%2Bagenda.jpg">
+<h2 id="org58f9b73">Today's agenda</h2>
+<ol>
+<li>Motivation</li>
+<li>Fast Prototyping</li>
+<li>Elixir at Talkdesk</li>
+<li>Technology Radar</li>
+<li>Elixir's Future</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-org991982e">
+<h2 id="org991982e">Motivation</h2>
+<div class="outline-text-2" id="text-org991982e">
+</div></section>
+</section>
+<section>
+<section id="slide-org248ea21">
+<h3 id="org248ea21">Codebits 2014</h3>
+<p>
+First contact with Elixir
+<a href="https://codebits.eu/intra/s/session/370">https://codebits.eu/intra/s/session/370</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org5a7c43a">
+<h3 id="org5a7c43a">Hackathon culture</h3>
+<p>
+Two days, solve a problem
+</p>
+
+<p>
+Exploration mode ON
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgf9c335a">
+<h3 id="orgf9c335a">Building a platform</h3>
+<div class="outline-text-3" id="text-orgf9c335a">
+</div></section>
+<section id="slide-org21e9f76">
+<h4 id="org21e9f76">From monolith to micro-services</h4>
+<ul>
+<li>API Gateway pattern</li>
+<li>Authorization Server</li>
+<li>Events Gateway pattern</li>
+<li>Outbound Webhooks</li>
+
+</ul>
+</section>
+<section id="slide-org17e2ea0">
+<h4 id="org17e2ea0">API Gateway</h4>
+
+<div class="figure">
+<p><img src="http://nordicapis.com/wp-content/uploads/api-gateway-visualization-flow-architecture-nordic-apis.png" alt="api-gateway-visualization-flow-architecture-nordic-apis.png" />
+</p>
+</div>
+</section>
+<section id="slide-org24fed12">
+<h4 id="org24fed12">AppConnect</h4>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/iE6PEeSvHmU" frameborder="0" allowfullscreen></iframe>
+</section>
+</section>
+<section>
+<section id="slide-orgfdce10f">
+<h2 id="orgfdce10f">Fast Prototyping</h2>
+<div class="outline-text-2" id="text-orgfdce10f">
+</div></section>
+</section>
+<section>
+<section id="slide-org9ec2698">
+<h3 id="org9ec2698">Phoenix microservice</h3>
+<ul class="fragment">
+<li>Very complete web framework</li>
+<li>Approachable syntax</li>
+<li>Performance</li>
+<li>REPL (help on functions, error messages)</li>
+<li>Tooling (Mix)</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgd56b204">
+<h3 id="orgd56b204">Presence</h3>
+<ul>
+<li class="fragment appear">Realtime tracking (vs. heartbeat/Redis)</li>
+<li class="fragment appear">Scalable automatic clustering</li>
+<li class="fragment appear">Resilient to node failures</li>
+
+</ul>
+</section>
+<section >
+<p>
+<a href="https://lh6.googleusercontent.com/Lud7lKElX27yr8T1duyedttEkPHmhtra6EL0zjZxKrGK7CSbBgASVIgP4Jzj5XuWgL-XM-59YG7bGw4jwInU-8bfbt4hWEOpdy7l-F4iQj9ULHMBcP8OQ6pns6OKK70AzRqACJfzpV8">https://lh6.googleusercontent.com/Lud7lKElX27yr8T1duyedttEkPHmhtra6EL0zjZxKrGK7CSbBgASVIgP4Jzj5XuWgL-XM-59YG7bGw4jwInU-8bfbt4hWEOpdy7l-F4iQj9ULHMBcP8OQ6pns6OKK70AzRqACJfzpV8</a>
+</p>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule Presence.UserSocket do
+  use Phoenix.Socket
+
+  channel "rooms:lobby", Presence.RoomChannel
+
+  transport :websocket, Phoenix.Transports.WebSocket, timeout: 45_000
+
+  def connect(%{"user_id" => id} = params, socket) do
+    socket = assign(socket, :user_id, id)
+    socket = assign(socket, :device, params["device"])
+    socket = assign(socket, :name , params["name"])
+
+    {:ok, socket}
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule Presence.RoomChannel do
+  use Presence.Web, :channel
+  alias Presence.Presence
+
+  def join("rooms:lobby", _, socket) do
+    send self(), :after_join
+    {:ok, socket}
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >def handle_info(:after_join, socket) do
+  Presence.track(socket, socket.assigns.user_id, %{
+    device: socket.assigns.device,
+    status: "available",
+    name:   socket.assigns.name,
+    online_at:  inspect(System.system_time(:seconds))
+  })
+  push socket, "presence_state", Presence.list(socket)
+  {:noreply, socket}
+end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  def handle_in("set_status", %{"status" => status, "reason" => reason}, socket) do
+    Presence.update(socket, socket.assigns.user_id, %{
+          device: socket.assigns.device,
+          status: status,
+          name:   socket.assigns.name,
+          online_at: inspect(System.system_time(:seconds)),
+    })
+    {:noreply, socket}
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="javascript" >import {Presence, Socket} from 'phoenix';
+
+  init (options) {
+    this.presences = {};
+    this.socket = new Socket(__PHOENIX_WS_URL__, {params: options});
+    this.socket.connect();
+    this.room = this.socket.channel("rooms:lobby", {});
+
+    this.room.on("presence_state", state => {
+      Presence.syncState(this.presences, state, this.onJoin, this.onLeave);
+    });
+    this.room.on("presence_diff", state => {
+      Presence.syncDiff(this.presences, state, this.onJoin, this.onLeave);
+    });
+    this.room.join();
+  }
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="javascript" >setStatus (data) {
+  this.room.push("set_status", data);
+}
+
+onJoin (userId, currentPresence, {metas}) {
+  if (userId === this.userId) {
+    benchmarkUpdate(metas);
+  } else {
+    updateAgentStatus(userId, metas);
+  }
+}
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3810f1e">
+<h3 id="org3810f1e">Empurrador</h3>
+<ul>
+<li class="fragment appear">Pusher clone</li>
+<li class="fragment appear">Websockets</li>
+<li class="fragment appear">Fraction of the cost</li>
+<li class="fragment appear">Able to handle current traffic</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgbbc907e">
+<h3 id="orgbbc907e">OmniView</h3>
+<blockquote nil>
+<p>
+Track your calls across the globe
+</p>
+</blockquote>
+<ul>
+<li class="fragment appear">Call geolocation</li>
+<li class="fragment appear">Mapbox API</li>
+<li class="fragment appear">Empurrador</li>
+
+</ul>
+</section>
+<section >
+<iframe src="https://drive.google.com/file/d/0B2DsZNNFXqaQNEJIaVRXZWNnWmM/preview" width="800" height="600" allowfullscreen></iframe>
+</section>
+</section>
+<section>
+<section id="slide-orgee76232">
+<h3 id="orgee76232">GraphQL</h3>
+<div class="outline-text-3" id="text-orgee76232">
+</div></section>
+<section id="slide-org95c9294">
+<h4 id="org95c9294">Fast prototyping</h4>
+<ul>
+<li>Facebook</li>
+<li>Github</li>
+<li>Yelp</li>
+
+</ul>
+</section>
+<section >
+<iframe src="https://www.graphqlhub.com/playground?query=%23%20Welcome%20to%20GraphQLHub!%20Type%20your%20GraphQL%20query%20here%2C%20or%0A%23%20explore%20the%20%22Docs%22%20to%20the%20right%0A%0A%7B%0A%20%20hn2%20%7B%0A%20%20%20%20nodeFromHnId(id%3A%22clayallsopp%22%2C%20isUserId%3Atrue)%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20...%20on%20HackerNewsV2User%20%7B%0A%20%20%20%20%20%20%20%20submitted(first%3A%205)%20%7B%0A%20%20%20%20%20%20%20%20%20%20pageInfo%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20hasNextPage%0A%20%20%20%20%20%20%20%20%20%20%20%20endCursor%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%0A%20%20%20%20%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20...%20on%20HackerNewsV2Story%20%7B%0A%09%09%09%09%09%09%09%09score%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20url%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20...%20on%20HackerNewsV2Comment%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20text%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D" width="1024" height="780"></iframe>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AppsGraphql.Schema.Types do
+  use Absinthe.Schema.Notation
+  use Absinthe.Relay.Schema.Notation
+
+  object :app do
+    field :name, :string
+    field :display_name, :string
+    field :scopes, list_of(:string)
+    field :installations, list_of(:installation)
+
+    field :resource, :resource do
+      arg :type, :resource_type
+      resolve &AppsGraphql.FindIcon.by_type/2
+    end
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  object :user do
+    field :name, :string
+  end
+
+  enum :subscription_type do
+    value :trial
+    value :paid
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AppsGraphql.Schema do
+  use Absinthe.Schema
+  use Absinthe.Relay.Schema
+  import_types AppsGraphql.Schema.Types
+
+  query do
+    field :apps, list_of(:app) do
+      resolve &AppsGraphql.FindApps.all/2
+    end
+
+    field :user, type: :user do
+      arg :id, non_null(:id)
+      resolve &AppsGraphql.FindUser.one/2
+    end
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  mutation do
+    field :installation, type: :installation do
+      arg :users, non_null(:users_input)
+      arg :subscription, :subscription_type
+
+      resolve &AppsGraphql.InstallApp.create/2
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org4e2c214">
+<h2 id="org4e2c214">In Production</h2>
+<div class="outline-text-2" id="text-org4e2c214">
+</div></section>
+</section>
+<section>
+<section id="slide-org3b0b818">
+<h3 id="org3b0b818">Auth System</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgf3221de">
+<h3 id="orgf3221de">Concurrency</h3>
+<blockquote nil>
+<p>
+"self-healing software without building complex self-healing software"
+</p>
+</blockquote>
+</section>
+</section>
+<section>
+<section id="slide-orgc1f570f">
+<h3 id="orgc1f570f">Goals</h3>
+<ol>
+<li>Parallel processing across accounts</li>
+<li>Save resources based on account activity</li>
+<li>Have multiple handlers per type of event</li>
+
+</ol>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.AccountHandler do
+  use GenServer
+
+  def start_link(account_id) do
+    GenServer.start_link(__MODULE__, name: account_id)
+  end
+
+  defp account_consumer(account_id) do
+    case Process.whereis(account_id) do
+      pid when is_pid(pid) -> {:ok, pid}
+      _                    -> start_link(account_id)
+    end
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  def process(event = %{"account_id" => account_id}) do
+    with {:ok, pid} <- account_consumer(account_id) do
+      GenServer.cast(pid, {:consume, event})
+    end
+  end
+
+  def handle_cast({:consume, event}, state) do
+    # process event
+    {:noreply, %{state | event: event}}
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.AccountHandler do
+  use GenServer
+
+  def start_link(account_id, , timeout \\ 1000) do
+    GenServer.start_link(__MODULE__, %{timeout: timeout},
+                         name: account_id, restart: :transient)
+  end
+
+  def init(%{timeout: timeout}) do
+    {:ok, %{timeout: timeout}, timeout}
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  def handle_cast({:consume, event}, state = %{timeout: timeout}) do
+     # process event
+    {:noreply, %{state | event: event}, timeout}
+  end
+
+  def handle_info(:timeout, state) do
+    {:stop, :normal, state}
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.AccountHandler do
+  use GenServer
+
+  def init(%{handlers: handlers, timeout: timeout}) do
+    {:ok, manager} = GenEvent.start_link
+    Enum.each(handlers, &GenEvent.add_mon_handler(manager, &1, %{}))
+    {:ok, %{timeout: timeout, manager: manager}, timeout}
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  def handle_cast({:consume, event}, state = %{manager: manager, timeout: timeout}) do
+    GenEvent.notify(manager, event)
+    {:noreply, %{state | event: event}, timeout}
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.AccountHandler do
+  alias AuthConsumer.TalkdeskHandler
+  require Logger
+  use GenServer
+
+  @behaviour TalkdeskHandler
+  @default_keep_alive 1000
+
+  def start_link(name, handlers \\ default_handlers, timeout \\ default_timeout) do
+    GenServer.start_link(__MODULE__, %{handlers: handlers, timeout: timeout, supervisor: self}, name: name, restart: :transient)
+  end
+
+  def init(%{handlers: handlers, timeout: timeout, supervisor: supervisor}) do
+    {:ok, manager} = GenEvent.start_link
+
+    handlers |> Enum.each(&GenEvent.add_mon_handler(manager, &1, %{supervisor: supervisor}))
+
+    {:ok, %{timeout: timeout, supervisor: supervisor, manager: manager, event: nil}, timeout}
+  end
+
+  def process(event = %{"account_id" => account_id}, _state \\ %{}) do
+    with {:ok, pid} <- account_consumer(account_id) do
+      GenServer.cast(pid, {:consume, event})
+    end
+  end
+
+  def handle_cast({:consume, event}, state = %{manager: manager, timeout: timeout}) do
+    GenEvent.notify(manager, event)
+
+    {:noreply, %{state | event: event}, timeout}
+  end
+
+  def handle_info(:timeout, state = %{timeout: timeout, manager: manager}) do
+    Logger.warn "Stopping #{inspect self} due to #{timeout}ms of inactivity"
+    GenEvent.stop(manager)
+    {:stop, :normal, state}
+  end
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org1774bc1">
+<h3 id="org1774bc1">Handlers</h3>
+<div class="org-src-container">
+
+<pre><code class="ruby" >module Events
+  class AgentProcessor < Processor
+
+    def on_agent_deleted(event)
+      args = {
+        account_id: event['account_id'],
+        agent_email: event['agent_email'],
+        agent_id: event['agent_id']
+      }
+
+      Interactor(:remove_agent).call args
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="ruby" >module TalkdeskEvents
+
+  def self.extended(base)
+    base.processors = []
+  end
+
+  def process_event(event)
+    processors.each do |processor|
+      event_handler = "on_#{event['event'] || event[:event]}"
+      next unless processor.respond_to?(event_handler)
+
+      processor.send(event_handler, event)
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.UserEventsHandler do
+  use AuthConsumer.TalkdeskHandler
+
+  def process(%{
+      "event" => event,
+      "account_id" => account_id,
+      "agent_id" => agent_id,
+    }, state) when event in ~w(agent_deleted agent_deactivated) do
+
+    toggle_user(account_id, agent_id, false)
+    revoke_tokens(agent_id)
+
+    {:ok, state}
+  end
+end
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org73b7b2f" data-background="http://i.imgur.com/iZcUNxH.gif" data-background-repeat="t">
+<h3 id="org73b7b2f">Macros are like&#x2026;</h3>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.TalkdeskHandler do
+  @callback process(%{}, any) :: {:ok, any}
+
+  defmacro __using__(_opts) do
+    quote do
+      @behaviour AuthConsumer.TalkdeskHandler
+
+      defoverridable [process: 2]
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.TalkdeskHandler do
+  @callback process(%{}, any) :: {:ok, any}
+
+  defmacro __using__(_opts) do
+    quote do
+      use GenEvent
+      require Logger
+
+      @behaviour AuthConsumer.TalkdeskHandler
+
+      defdelegate    handle_event(event, state), to: __MODULE__, as: :process
+      defoverridable [handle_event: 2]
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+<section >
+<div class="org-src-container">
+
+<pre><code class="elixir" >defmodule AuthConsumer.TalkdeskHandler do
+  defmacro __using__(_opts) do
+    quote do
+      use GenEvent
+      require Logger
+
+      @behaviour AuthConsumer.TalkdeskHandler
+
+      defdelegate    handle_event(event, state), to: __MODULE__, as: :process
+      defoverridable [handle_event: 2]
+
+      import AuthConsumer.TalkdeskHandler
+      @before_compile AuthConsumer.TalkdeskHandler
+    end
+  end
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre class="fragment"><code class="elixir" >  @callback process(%{}, any) :: {:ok, any}
+
+  defmacro __before_compile__(_env) do
+    quote do
+      def process(event, state) do
+        Logger.debug "Ignoring event #{inspect event}"
+        {:ok, state}
+      end
+    end
+  end
+end
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org114b79b">
+<h3 id="org114b79b">Debugging</h3>
+<p>
+<a href="https://lh6.googleusercontent.com/38s_ZcFTuUFit-bfYtQEyoOhrURYrIIBNaCcUuqsnnJQfUAiPz5dilubYO8eYch_oVS7VxeC0K91kz7pvBF9b8NojRUD8-8oNbwWoYxVAjczsbA5se0D4EaMFLv6kxfdkeb7p76ytJM">https://lh6.googleusercontent.com/38s_ZcFTuUFit-bfYtQEyoOhrURYrIIBNaCcUuqsnnJQfUAiPz5dilubYO8eYch_oVS7VxeC0K91kz7pvBF9b8NojRUD8-8oNbwWoYxVAjczsbA5se0D4EaMFLv6kxfdkeb7p76ytJM</a>
+<a href="https://lh6.googleusercontent.com/HX_Af_q5QlltTH4FW1kCPrjknthff4d8Qvq7ZpMJRkjQDsBqkwwO5g1gFwRdmFLM0dVpBZb7rNf4Pbn-VYn3qi3VPoBE-_nM1c22-TVw_kOGkEtkzyXHO13DP3UoBUFqvWVmqUYk7vs">https://lh6.googleusercontent.com/HX_Af_q5QlltTH4FW1kCPrjknthff4d8Qvq7ZpMJRkjQDsBqkwwO5g1gFwRdmFLM0dVpBZb7rNf4Pbn-VYn3qi3VPoBE-_nM1c22-TVw_kOGkEtkzyXHO13DP3UoBUFqvWVmqUYk7vs</a>
+<a href="https://lh6.googleusercontent.com/38s_ZcFTuUFit-bfYtQEyoOhrURYrIIBNaCcUuqsnnJQfUAiPz5dilubYO8eYch_oVS7VxeC0K91kz7pvBF9b8NojRUD8-8oNbwWoYxVAjczsbA5se0D4EaMFLv6kxfdkeb7p76ytJM">https://lh6.googleusercontent.com/38s_ZcFTuUFit-bfYtQEyoOhrURYrIIBNaCcUuqsnnJQfUAiPz5dilubYO8eYch_oVS7VxeC0K91kz7pvBF9b8NojRUD8-8oNbwWoYxVAjczsbA5se0D4EaMFLv6kxfdkeb7p76ytJM</a>
+<a href="https://lh6.googleusercontent.com/2w8mEr0A34G6JKRhPw-tPtF6AJ06CwSydFcVzjp8Z1ewFZLZXFarFNq49g5z9P_abzcq3yJ359LPS3o250es-ijs1DcNLPVF9m3LOk98GAxn4YwgEgM5K4NGyQJiTgGJ0H-sHDgePb0">https://lh6.googleusercontent.com/2w8mEr0A34G6JKRhPw-tPtF6AJ06CwSydFcVzjp8Z1ewFZLZXFarFNq49g5z9P_abzcq3yJ359LPS3o250es-ijs1DcNLPVF9m3LOk98GAxn4YwgEgM5K4NGyQJiTgGJ0H-sHDgePb0</a>
+<a href="https://lh5.googleusercontent.com/0HgK96YnyafudJQJBgA5b7v5Jaf1Z5P2H3D7EnUpvUgGnfpaNui1pdz8q76sdqgn4m23l5tfXDDqKYOkts70-ASqMaw7hwGAQgeRryeyVB4VrX6oVMEGCra9hxJYkD6XDLW7_KVG1kM">https://lh5.googleusercontent.com/0HgK96YnyafudJQJBgA5b7v5Jaf1Z5P2H3D7EnUpvUgGnfpaNui1pdz8q76sdqgn4m23l5tfXDDqKYOkts70-ASqMaw7hwGAQgeRryeyVB4VrX6oVMEGCra9hxJYkD6XDLW7_KVG1kM</a>
+<a href="https://lh5.googleusercontent.com/W5ko4AQKiZFFtAVwpHE3TClHIt9-Bv-yiwr7mPijnjXncnBq2nPoP_zeeDQatbqdk7EUAtU57jyxFgPzthJ2OwD42MJWjuJuOmCOgufeycziVaw5lrqvgXrd6o3_vQ8ya8eZoqF-TV4">https://lh5.googleusercontent.com/W5ko4AQKiZFFtAVwpHE3TClHIt9-Bv-yiwr7mPijnjXncnBq2nPoP_zeeDQatbqdk7EUAtU57jyxFgPzthJ2OwD42MJWjuJuOmCOgufeycziVaw5lrqvgXrd6o3_vQ8ya8eZoqF-TV4</a>
+<a href="https://lh6.googleusercontent.com/3YVqksG43qJf_9DVut8G6zVrOjQEfjsz780LMLbOMXJGUIVeT7bQseI7oJN8Oy6j-IaRmu8X4GDaVepCu661lxhXWI-U5_AyDB1qxc0fAhXW_l9WPZrIqFKiYltGmhzGqlQmI06mLd0">https://lh6.googleusercontent.com/3YVqksG43qJf_9DVut8G6zVrOjQEfjsz780LMLbOMXJGUIVeT7bQseI7oJN8Oy6j-IaRmu8X4GDaVepCu661lxhXWI-U5_AyDB1qxc0fAhXW_l9WPZrIqFKiYltGmhzGqlQmI06mLd0</a>
+<a href="https://lh6.googleusercontent.com/W_8RCfqf2kPjJyRvIH8GmSSkOJSYJ82BjflUD4rQT7uyIaTGkK7PCwSqqNXNC4kbJBM5AKnX3Exl9xZLStE3eh4B_06yj-_T3aper5QGa5UWGLcfJ4FjXKLkz05BH682FM4b2s09Z_Y">https://lh6.googleusercontent.com/W_8RCfqf2kPjJyRvIH8GmSSkOJSYJ82BjflUD4rQT7uyIaTGkK7PCwSqqNXNC4kbJBM5AKnX3Exl9xZLStE3eh4B_06yj-_T3aper5QGa5UWGLcfJ4FjXKLkz05BH682FM4b2s09Z_Y</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org9adb601">
+<h3 id="org9adb601">Events API</h3>
+</section>
+</section>
+<section>
+<section id="slide-org64b2a4b">
+<h3 id="org64b2a4b">Monitoring</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgd3afc71">
+<h3 id="orgd3afc71">Retries</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgf506d6b">
+<h3 id="orgf506d6b">GenStage</h3>
+</section>
+</section>
+<section>
+<section id="slide-org981a1de">
+<h2 id="org981a1de">Technology Radar</h2>
+</section>
+</section>
+<section>
+<section id="slide-org6866a3f">
+<h2 id="org6866a3f">Elixir/OTP Platform</h2>
+<div class="outline-text-2" id="text-org6866a3f">
+</div></section>
+</section>
+<section>
+<section id="slide-org462bb20">
+<h3 id="org462bb20">Adopt</h3>
+<ul>
+<li class="fragment appear">Mix</li>
+<li class="fragment appear">OTP</li>
+<li class="fragment appear">Phoenix</li>
+<li class="fragment appear">Logger</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgf147161">
+<h3 id="orgf147161">Trial</h3>
+<ul>
+<li class="fragment appear">Presence</li>
+<li class="fragment appear">Macros</li>
+<li class="fragment appear">Umbrella Apps</li>
+<li class="fragment appear">Debugging</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org45132fc">
+<h3 id="org45132fc">Assess</h3>
+<ul>
+<li class="fragment appear">GenStage</li>
+<li class="fragment appear">Clustered Erlang</li>
+<li class="fragment appear">Deployment</li>
+<li class="fragment appear">Profiling</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgd0cf1d5">
+<h3 id="orgd0cf1d5">Hold</h3>
+<ul>
+<li class="fragment appear">GenEvent</li>
+<li class="fragment appear">Non-ecto drivers</li>
+<li class="fragment appear">Monitoring</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgedd27bb">
+<h2 id="orgedd27bb">Hex Libraries</h2>
+<div class="outline-text-2" id="text-orgedd27bb">
+</div></section>
+</section>
+<section>
+<section id="slide-org42c1647">
+<h3 id="org42c1647">Adopt</h3>
+<aside class="notes">
+<p>
+Credo learns and doesn't overwhelm
+</p>
+
+</aside>
+<ul>
+<li class="fragment appear">AMQP</li>
+<li class="fragment appear">Credo</li>
+<li class="fragment appear">ExCoveralls</li>
+<li class="fragment appear">JWT</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org92410c2">
+<h3 id="org92410c2">Trial</h3>
+<ul>
+<li class="fragment appear">AppSignal</li>
+<li class="fragment appear">Absinthe</li>
+<li class="fragment appear">Confex</li>
+<li class="fragment appear">Bugsnag</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org816292f">
+<h3 id="org816292f">Assess</h3>
+<aside class="notes">
+<p>
+Talk about the S3 incident and how building Docker images had too many dependencies from online services
+</p>
+
+</aside>
+<ul>
+<li class="fragment appear">Distillery</li>
+<li class="fragment appear">Dialyzer</li>
+<li class="fragment appear">Espec</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org6b315c4">
+<h3 id="org6b315c4">Hold</h3>
+<ul>
+<li class="fragment appear">Meck</li>
+<li class="fragment appear">Xandra</li>
+<li class="fragment appear">MongoDB</li>
+<li class="fragment appear">HTTP Clients</li>
+<li class="fragment appear">OAuth Frameworks</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgbef89ed">
+<h2 id="orgbef89ed">Future</h2>
+<aside class="notes">
+<p>
+Problemas com recolha de métricas no passado, experimentamos várias alternativas&#x2026;
+</p>
+
+</aside>
+<p>
+Directly from ElixirConf 2016
+</p>
+
+<ul>
+<li>GenHTTP</li>
+<li>Property testing</li>
+<li>Data streams</li>
+<li>Phoenix 1.4 (focus on monitoring)</li>
+<li>Paparazzi (visualization tool)</li>
+<li>Wobserver</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/lib/js/head.min.js"></script>
+<script src="file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.20,
+minScale: 0.50,
+maxScale: 3.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:////Users/tjsousa/.config/yarn/global/node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

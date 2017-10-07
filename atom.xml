@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom"> <title>Tiago&#039;s voice amplifier</title> <link href="https://tjsousa.github.com"/> <link type="application/atom+xml" rel="self" href="https://tjsousa.github.com/atom.xml"/> <updated>Sat, 07 Oct 2017 19:42:56 +0100</updated> <author> <name>Tiago Sousa</name> </author> <entry> <link type="text/html" rel="alternate" href="https://tjsousa.github.com/posts/Talk-at-PixelsCamp-2017.html"/> <title>Talk at PixelsCamp 2017</title> <published>2017-09-29</published> <updated>2017-09-29</updated> <author> <name>Tiago Sousa</name> <uri>https://tjsousa.github.com</uri> </author> <content type="html">&lt;h2&gt;&lt;a href=&quot;/static/appconnect.html&quot; &gt;The backstory on AppConnect&lt;/a&gt;&lt;/h2&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="https://tjsousa.github.com/posts/Talk-at-Elixir-Lisbon-meetup.html"/> <title>Talk at Elixir Lisbon meetup</title> <published>2017-05-24</published> <updated>2017-05-24</updated> <author> <name>Tiago Sousa</name> <uri>https://tjsousa.github.com</uri> </author> <content type="html">&lt;h2&gt;&lt;a href=&quot;/static/elixir_at_talkdesk.html&quot; &gt;Elixir at Talkdesk&lt;/a&gt;&lt;/h2&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="https://tjsousa.github.com/posts/Jony-Ive-says-it-better.html"/> <title>Jony Ive says it better</title> <published>2012-03-13</published> <updated>2012-03-13</updated> <author> <name>Tiago Sousa</name> <uri>https://tjsousa.github.com</uri> </author> <content type="html">&lt;h2&gt;&lt;a href=&quot;http://www.thisislondon.co.uk/lifestyle/london-life/sir-jonathan-ive-the-iman-cometh-7562170.html&quot; &gt;Jony Ive, talking ideas and design:&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is more difficult is when you are intrigued by an opportunity. That, I think, really exercises the skills of a designer. &lt;strong&gt;It’s not a problem you’re aware or, nobody has articulated a need. But you start asking questions, what if we do this, combine it with that, would that be useful?&lt;/strong&gt; This creates opportunities that could replace entire categories of device, rather than tactically responding to an individual problem. That’s the real challenge, and that’s what is exciting.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;-- &lt;cite&gt;Johnatan Ive, interviewed for London Evening Standard&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Great piece of insight from Apple&#039;s industrial design genius about the process of generating new ideas and products. &lt;/p&gt;
+
+&lt;p&gt;(If you read my [last post]({{ page.previous.url }}), in &lt;strong&gt;bold&lt;/strong&gt; are the words of an actual &lt;i&gt;delighter&lt;/i&gt; on the origins of the &amp;quot;delayed wow&amp;quot;.)&lt;/p&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="https://tjsousa.github.com/posts/A-delayed-wow-is-delayed.html"/> <title>A delayed wow is delayed</title> <published>2012-03-06</published> <updated>2012-03-06</updated> <author> <name>Tiago Sousa</name> <uri>https://tjsousa.github.com</uri> </author> <content type="html">&lt;h2&gt;A tiny favourite&lt;/h2&gt;
+
+&lt;p&gt;I keep a personal list on &lt;a href=&quot;http://www.evernote.com/&quot; &gt;Evernote&lt;/a&gt; called &amp;quot;tiny favourite things that make me happy&amp;quot;. It&#039;s meant to keep anything on a day-by-day basis that happens to be both small in its scope but highly significant for me experiencing it.&lt;/p&gt;
+
+&lt;p&gt;My most recent entry involves Vemedio&#039;s &lt;a href=&quot;http://vemedio.com/instacast&quot; &gt;Instacast&lt;/a&gt; and means something to what I think this blog is about, so I decided to share it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://itunes.apple.com/pt/app/instacast/id420368235?mt=8&quot; &gt;This iPhone app&lt;/a&gt; (along with its bigger cousin &lt;a href=&quot;http://itunes.apple.com/pt/app/instacast-hd/id478853570?mt=8&quot; &gt;for the iPad&lt;/a&gt;) is an alternative to iTunes to manage your podcast subscriptions. I was motivated to try it after getting tired of ever-synching my iPhone to iTunes just to get podcasts updated. &lt;a href=&quot;http://flattr.com&quot; &gt;Flattr&lt;/a&gt; integration, iCloud sync between devices and easy access to show notes are also valuable additions.&lt;/p&gt;
+
+&lt;p&gt;Still, what made Instacast into my list was a simple feature of its media player: when you pause, it saves the playback state; when you resume later (and this is the favourite), &lt;strong&gt;if later is not afterwards&lt;/strong&gt; (say, the next ten minutes), &lt;strong&gt;it will playback from a few seconds before&lt;/strong&gt; that saved position. &lt;/p&gt;
+
+&lt;p&gt;This is extremely simple but its impact is profound. It gives you context. The first time it happened I didn&#039;t even notice. It just made sense. And, when I did notice, I actually had to wait more than ten minutes to double check… So, a few hours later, when I got back to my podcast listening, in a natural yet surprising way: &amp;quot;wow, it does work!&amp;quot;&lt;/p&gt;
+
+&lt;h2&gt;Designing for the user experience&lt;/h2&gt;
+
+&lt;p&gt;This need, which I clearly had (first thought after resuming a podcast was always somewhere between &amp;quot;why am i listening to this?&amp;quot; and &amp;quot;what are these people talking about?&amp;quot;), was never roughly articulated nor even noticed by me as a podcast listener. Even Apple, that is known for having this kind of care for the user experience, had never introduced it in its music app (which happens to play podcasts as well). It took some people (thanks &lt;a href=&quot;https://twitter.com/#!/vemedio&quot; &gt;@Vemedio&lt;/a&gt;) a whole lot of care and work to think about every detail of podcast listening to come up with this feature. Which I couldn&#039;t  even name… (&lt;a href=&quot;http://prefs.org/post/8517054363/instacast&quot; &gt;I found later&lt;/a&gt;, when researching for this post, that this feature is called &lt;strong&gt;replay after pause&lt;/strong&gt; - now it seems obvious!).&lt;/p&gt;
+
+&lt;p&gt;John Maeda, who you can &lt;a href=&quot;https://twitter.com/#!/johnmaeda&quot; &gt;follow on Twitter&lt;/a&gt;, put this feeling into words in his book &lt;a href=&quot;http://lawsofsimplicity.com/&quot; &gt;&amp;quot;Laws of Simplicity&amp;quot;&lt;/a&gt;, refering to &lt;a href=&quot;http://www.muji.eu/&quot; &gt;Muji&#039;s design&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Muji doesn&#039;t design for a quick &amp;quot;wow&amp;quot; reaction, but for the &amp;quot;delayed-wow&amp;quot; instead. After owning it a while you think, &amp;quot;Wow!&amp;quot;&amp;quot;-- &lt;cite&gt;John Maeda, &amp;quot;Laws of Simplicity&amp;quot;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When designing for user experience, your aim is to delight the user. When designing for user requested features, you may only live to meet his expectations. And this is a fundamental difference: where the first generates trust and forms a long term relationship with the product, the second will only exist until a cheaper alternative emerges.&lt;/p&gt;
+
+&lt;p&gt;For comments, follow &lt;a href=&quot;https://twitter.com/#!/tjsousa&quot; &gt;@tjsousa&lt;/a&gt; on Twitter.&lt;/p&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="https://tjsousa.github.com/posts/Blogging-through-iA-Writer---only---ubiquitously.html"/> <title>Blogging through iA Writer - only! - ubiquitously</title> <published>2012-02-15</published> <updated>2012-02-15</updated> <author> <name>Tiago Sousa</name> <uri>https://tjsousa.github.com</uri> </author> <content type="html">&lt;h2&gt;The motivation&lt;/h2&gt;
+
+&lt;p&gt;This is a kind of bootstrapping post about my new writing experience. With the help of some simple yet powerful tools, it is possible to simplify blogging to its true essence: ideas and a text editor.&lt;/p&gt;
+
+&lt;p&gt;It may take a bit of hacking to glue things together but, concerning the user experience, this is how streamlined it gets:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;NIL&quot; alt=&quot;iA Writer on iPad&quot; /&gt;({{ BASE_PATH }}/images/iAwriter.jpg)&lt;/p&gt;
+
+&lt;p&gt;And here are the tools used:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; &gt;Jekyll&lt;/a&gt;, as the static site generator.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com&quot; &gt;GitHub&lt;/a&gt;, to host the blog using git for deploy.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dropbox.com/&quot; &gt;Dropbox&lt;/a&gt;, to save new posts from any device.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iawriter.com/&quot; &gt;iA Writer&lt;/a&gt;, to edit posts on the Mac and iPad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jekyll is a static site generator written by Github&#039;s co-founder &lt;a href=&quot;http://tom.preston-werner.com/&quot; &gt;Tom Preston-Werner&lt;/a&gt;. (You can find more information &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki&quot; &gt;here&lt;/a&gt; and follow this tutorial from Jekyll-Bootstrap &lt;a href=&quot;http://jekyllbootstrap.com/&quot; &gt;project&lt;/a&gt;, which is itself cloneable from Github to help you get started).&lt;/p&gt;
+
+&lt;p&gt;Github pages will recognize your Jekyll-enabled website which automatically rebuilds itself when new changes are pushed to the repository (More information &lt;a href=&quot;http://pages.github.com/&quot; &gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The act of creating a new post becomes as simple as saving a new file inside &lt;code&gt;_posts&lt;/code&gt;, written in any of Jekyll&#039;s supported formats (i&#039;m using John Gruber&#039;s &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; &gt;Markdown&lt;/a&gt; for its ease of use).&lt;/p&gt;
+
+&lt;p&gt;The last bit of glue is a mix of Dropbox and OS X magic. Linking a folder in Dropbox to the local Git repository enables posting from every device where you have configured Dropbox and a text editor. To fully automate the process i use Automator&#039;s &lt;code&gt;Folder Actions&lt;/code&gt; to watch the Dropbox linked folder and &lt;code&gt;git commit&lt;/code&gt; every change. A simple Git hook goes all the way to GitHub, &lt;code&gt;git push&lt;/code&gt;ing on every commit.&lt;/p&gt;
+
+&lt;h2&gt;The experience&lt;/h2&gt;
+
+&lt;p&gt;In the end, to make a post on the blog, i need to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open iA Writer on the Mac or iPad.&lt;/li&gt;
+&lt;li&gt;Edit my post using Markdown syntax.&lt;/li&gt;
+&lt;li&gt;Save it to Dropbox.&lt;/li&gt;
+&lt;li&gt;Wait 5 seconds for it to show up on Github.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;
+iA Writer is a joy to use on the Mac but it&#039;s even more profoundly inspiring when used on the go with just an iPad and an Apple Bluetooth Keyboard: where beautiful design meets true simplicity!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.” &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;cite&gt; Mark Weiser in “The Computer for the Twenty-First Century”&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For comments and questions, follow me on twitter &lt;a href=&quot;http://twitter.com/tjsousa&quot; &gt;@tjsousa&lt;/a&gt;&lt;/p&gt;
+</content> </entry> </feed>
